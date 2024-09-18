@@ -122,7 +122,6 @@ def test_contour(mock_dependencies):
 def test_load_iris_error(mock_dependencies):
     mock_dependencies['load_iris'].side_effect = FileNotFoundError
     with pytest.raises(FileNotFoundError):
-        print("This is not the file youre looking for")
         datasets.load_iris()
 
 # edge_case - test_permutation_empty - Test that permutation handles empty input gracefully
